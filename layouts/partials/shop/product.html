@@ -1,0 +1,249 @@
+<div class="col-sm-6 col-md-4 col-lg-3 product">
+    <a href="{{.RelPermalink}}">
+        <div class="img" style="background-image: url('{{ .Params.image }}');"></div>
+        <h4 class="mb-0">{{ .Title }}</h4>
+        <p class="mb-0 text-muted">${{ .Params.price }}</p>
+    </a>
+    <div id='product-component-{{ .Params.shopify_id }}'></div>
+    <script type="text/javascript">
+        (function() {
+            var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                    ShopifyBuyInit();
+                } else {
+                    loadScript();
+                }
+            } else {
+                loadScript();
+            }
+        
+            function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+            }
+        
+            function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                    domain: 'derwentvalleyrailway.myshopify.com',
+                    storefrontAccessToken: '952dc17e876951fe55a1afc8caf02ba8',
+                });
+        
+                ShopifyBuy.UI.onReady(client).then(function(ui) {
+                    ui.createComponent('product', {
+                        id: ['{{ .Params.shopify_id }}'],
+                        node: document.getElementById('product-component-{{ .Params.shopify_id }}'),
+                        moneyFormat: '%24%7B%7Bamount%7D%7D',
+                        options: {
+                            "product": {
+                                "variantId": "all",
+                                "width": "1000px",
+                                "contents": {
+                                    "img": false,
+                                    "imgWithCarousel": false,
+                                    "title": false,
+                                    "variantTitle": false,
+                                    "price": false,
+                                    "description": false,
+                                    "buttonWithQuantity": false,
+                                    "quantity": false
+                                },
+                                "text": {
+                                    "button": "Add to Cart"
+                                },
+                                "styles": {
+                                    "product": {
+                                        "@media (min-width: 601px)": {
+                                            "max-width": "100%",
+                                            "margin-left": "0",
+                                            "margin-bottom": "50px"
+                                        }
+                                    },
+                                    "button": {
+                                        "background-color": "#a51c21",
+                                        "width": "100%",
+                                        "font-family": "Roboto, sans-serif",
+                                        ":hover": {
+                                            "background-color": "#95191e"
+                                        },
+                                        ":focus": {
+                                            "background-color": "#95191e"
+                                        },
+                                        "font-weight": "normal"
+                                    },
+                                    "buttonWrapper": {
+                                        "margin-top": "10px",
+                                    },
+                                    "options": {
+                                        "max-width": "100% !important",
+                                    },
+                                    "variantTitle": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "title": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "description": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "price": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "compareAt": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal",
+                                        "font-size": "12px"
+                                    }
+                                },
+                                "googleFonts": [
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto"
+                                ]
+                            },
+                            "cart": {
+                                "contents": {
+                                    "button": true
+                                },
+                                "text": {
+                                    "button": "Checkout"
+                                },
+                                "styles": {
+                                    "button": {
+                                        "background-color": "#a51c21",
+                                        "font-family": "Roboto, sans-serif",
+                                        ":hover": {
+                                            "background-color": "#95191e"
+                                        },
+                                        ":focus": {
+                                            "background-color": "#95191e"
+                                        },
+                                        "font-weight": "normal"
+                                    },
+                                    "footer": {
+                                        "background-color": "#ffffff"
+                                    }
+                                },
+                                "googleFonts": [
+                                    "Roboto"
+                                ]
+                            },
+                            "modalProduct": {
+                                "contents": {
+                                    "img": false,
+                                    "imgWithCarousel": true,
+                                    "variantTitle": false,
+                                    "buttonWithQuantity": true,
+                                    "button": false,
+                                    "quantity": false
+                                },
+                                "styles": {
+                                    "product": {
+                                        "@media (min-width: 601px)": {
+                                            "max-width": "100%",
+                                            "margin-left": "0px",
+                                            "margin-bottom": "0px"
+                                        }
+                                    },
+                                    "button": {
+                                        "background-color": "#a51c21",
+                                        "font-family": "Roboto, sans-serif",
+                                        ":hover": {
+                                            "background-color": "#95191e"
+                                        },
+                                        ":focus": {
+                                            "background-color": "#95191e"
+                                        },
+                                        "font-weight": "normal"
+                                    },
+                                    "select": {
+                                        "width": "100%"
+                                    },
+                                    "variantTitle": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "title": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "description": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "price": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    },
+                                    "compareAt": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "font-weight": "normal"
+                                    }
+                                },
+                                "googleFonts": [
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto",
+                                    "Roboto"
+                                ]
+                            },
+                            "toggle": {
+                                "styles": {
+                                    "toggle": {
+                                        "font-family": "Roboto, sans-serif",
+                                        "background-color": "#a51c21",
+                                        ":hover": {
+                                            "background-color": "#95191e"
+                                        },
+                                        ":focus": {
+                                            "background-color": "#95191e"
+                                        },
+                                        "font-weight": "normal"
+                                    }
+                                },
+                                "googleFonts": [
+                                    "Roboto"
+                                ]
+                            },
+                            "option": {
+                                "styles": {
+                                    "label": {
+                                        "font-family": "Roboto, sans-serif"
+                                    },
+                                    "select": {
+                                        "font-family": "Roboto, sans-serif"
+                                    }
+                                },
+                                "googleFonts": [
+                                    "Roboto",
+                                    "Roboto"
+                                ]
+                            },
+                            "productSet": {
+                                "styles": {
+                                    "products": {
+                                        "@media (min-width: 601px)": {
+                                            "margin-left": "-20px"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                });
+            }
+        })();
+    </script>
+</div>

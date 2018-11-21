@@ -1,0 +1,12 @@
+<ul class="sidebar">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        {{ if and (.HasChildren) ($currentPage.HasMenuCurrent "main" . ) }}
+            {{ range .Children }}
+                <li class="{{if $currentPage.IsMenuCurrent "main" . }}active{{end}}">
+                    <a href="{{ .URL }}">{{ .Name }}<i class="icon-angle-right"></i></a>
+                </li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</ul>

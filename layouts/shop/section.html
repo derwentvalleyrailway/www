@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main id="shop">
+	<header>
+		<div class="container">
+			<div class="content">
+				<h1 class="display-4">Online Shop</h1>
+				<p class="lead">Help us fund the ongoing restoration and maintenance of rolling-stock and rail infrastructure by purchasing items from our online shop.</p>
+			</div>
+		</div>
+		<div class="shader"></div>
+	</header>
+    <section class="container py-3">
+		<div class="row">
+			{{ range .Pages }}
+				{{ partial "shop/product.html" . }}
+			{{ end }}
+		</div>
+	</section>
+</main>
+{{ end }}

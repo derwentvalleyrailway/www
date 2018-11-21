@@ -1,0 +1,6 @@
+# Ignore files created by Hugo
+public/
+resources/
+
+# Node modules
+node_modules/

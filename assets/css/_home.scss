@@ -1,0 +1,45 @@
+#home {
+
+    header {
+        background-image: url('/img/adventure.jpg');
+    }
+
+	.img.who {
+        background-image: url('../img/who.jpg');
+    }
+    
+	.img.plan {
+		background-image: url('../img/plan.jpg');
+    }
+    
+	.img.people {
+		background-image: url('../img/people.jpg');
+    }
+    
+    .bridge {
+	    background-image: url('../img/bridge.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .wrapper {
+            min-height: 24rem;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem 0;
+        }
+
+	    p {
+			max-width: 53.75rem;
+			color: white;
+			text-align: center;
+			font-style: italic;
+			font-size: 2.1rem;
+			line-height: 2.4rem;
+			text-shadow: 1px 1px 0px black;
+            margin-bottom: 0;
+        }
+    } 
+}

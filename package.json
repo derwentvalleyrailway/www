@@ -1,0 +1,24 @@
+{
+  "name": "www-hugo",
+  "version": "1.0.0",
+  "description": "Public facing website for the Derwent Valley Railway created with Hugo.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/derwentvalleyrailway/www-hugo.git"
+  },
+  "contributors": [
+    {
+      "name": "Owen Andrews",
+      "email": "owen@owenandre.ws"
+    }
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://bitbucket.org/derwentvalleyrailway/www-hugo#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}

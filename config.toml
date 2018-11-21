@@ -1,0 +1,42 @@
+languageCode = "en-us"
+title = "Derwent Valley Railway"
+baseURL = "https://dvr.org.au/"
+
+[params]
+	assetsBase = "/"
+	googleMapsApiKey = "AIzaSyD3mCeMb6721fhqX3A-HyEZ4vtBXiPRmBE"
+
+[menu]
+	[[menu.main]]
+		identifier = "about-us"
+		name = "About Us"
+		url = "/about-us/"
+		weight = 100
+
+	[[menu.contact]]
+		identifier = "phone"
+		name = "+61 3 6261 1946"
+		url = "tel:+61362611946"
+		pre = "<i class=\"icon-phone\"></i>"
+		weight = 1
+
+	[[menu.contact]]
+		identifier = "email"
+		name = "dvr@dvr.org.au"
+		url = "mailto:dvr@dvr.org.au"
+		pre = "<i class=\"icon-paper-plane\"></i>"
+		weight = 2
+
+	[[menu.contact]]
+		identifier = "facebook"
+		name = "Facebook"
+		url = "https://facebook.com/derwentvalleyrailway/"
+		pre = "<i class=\"icon-f\"></i>"
+		weight = 3
+
+	[[menu.contact]]
+		identifier = "instagram"
+		name = "Instagram"
+		url = "https://instagram.com/derwentvalleyrailway/"
+		pre = "<i class=\"icon-camera\"></i>"
+		weight = 4
