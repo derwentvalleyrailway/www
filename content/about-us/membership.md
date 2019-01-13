@@ -11,4 +11,4 @@ We always welcome new members to the organisation. Your membership will contribu
 
 All operations, restoration and administration is facilitated by volunteers who donate their time and expertise. Perhaps you would be interested in becoming involved in our activities? Contact us for more information.
 
-[Download 2018 Membership Application Form](https://s3-ap-southeast-2.amazonaws.com/dvr-www/assets/dvr-membership-application.pdf)
+[Download 2019 Membership Application Form](/downloads/dvr-membership-application.pdf)
