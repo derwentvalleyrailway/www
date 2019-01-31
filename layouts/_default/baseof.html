@@ -44,14 +44,7 @@
 		{{/* Snipcart Styles */}}
 		<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!=='all')media='all'"/>
 
-		{{/* Generate Styles */}}
-		{{ if ne (getenv "HUGO_ENV") "production" }}
-			{{ $styles := resources.Get "/css/main.scss" | toCSS (dict "enableSourceMap" true) }}
-			<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-		{{ else }}
-			{{ $styles := resources.Get "/css/main.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
-			<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
-		{{ end }}
+		<link rel="stylesheet" href="/css/app.css">
 	</head>
 	<body>
     	<nav id="sub-nav">
@@ -147,17 +140,7 @@
             </section>
 		</footer>
 
-        {{/* Generate Scripts */}}
-		{{ $jquery := resources.Get "/js/jquery.js" }}
-		{{ $main := resources.Get "/js/main.js" }}
-
-		{{ if ne (getenv "HUGO_ENV") "production" }}
-			{{ $script := slice $jquery $main | resources.Concat "/js/main.js" }}
-			<script src="{{ $script.RelPermalink }}"></script>
-		{{ else }}
-			{{ $script := slice $jquery $main | resources.Concat "/js/main.js" | minify | fingerprint }}
-			<script src="{{ $script.RelPermalink }}"></script>
-		{{ end }}
+        <script src="/js/app.js"></script>
 
 		{{/* Google Analytics */}}
 		{{ if eq (getenv "HUGO_ENV") "production" }}
