@@ -1,3 +1,5 @@
+let $ = require('./jquery');
+
 // Responsive Menu
 $burger = $("#main-nav .burger");
 $menu = $("#main-nav .container > ul");
