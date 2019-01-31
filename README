@@ -1,8 +1,0 @@
-# www-hugo
-
-Public facing website for the Derwent Valley Railway built with Hugo.
-
-## Requirments
-
-* [Hugo](https://github.com/spf13/hugo/releases) or `brew update && brew install hugo`
-* [Node.js](https://nodejs.org/en/download/)
