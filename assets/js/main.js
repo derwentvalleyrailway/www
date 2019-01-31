@@ -12,3 +12,10 @@ $burger.on('click', function(e) {
 		$menu.slideDown(200);
 	}
 });
+
+// Donate Link
+$(document).ready(function() {
+	if(window.location.hash == '#donate') {
+		document.getElementById('donate-btn').click();
+	}
+});
