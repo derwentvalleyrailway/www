@@ -111,13 +111,10 @@
                             width: 1.4rem;
                             height: 1.4rem;
                             border-radius: 0.7rem;
-                            line-height: 1.4rem;
+                            line-height: 1.5rem;
                             background-color: #e3e3e3;
-        
-                            &:before {
-                                position: relative;
-                                right: -1px;
-                            }
+                            text-align: center;
+                            font-size: .8em;
                         }
         
                         &:hover {

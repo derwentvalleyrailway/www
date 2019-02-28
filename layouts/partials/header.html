@@ -37,7 +37,7 @@
                                     <ul>
                                         {{ range .Children }}
                                             <li class="nav-main__menu-dropdown-link {{if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                                <a href="{{ .URL }}">{{ .Name }}<i class="icon-angle-right"></i></a>
+                                                <a href="{{ .URL }}">{{ .Name }} <i class="fas fa-chevron-right"></i></a>
                                             </li>
                                         {{ end }}
                                     </ul>

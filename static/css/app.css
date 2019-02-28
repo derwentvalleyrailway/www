@@ -10234,12 +10234,10 @@ footer .container ul li + li {
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 0.7rem;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   background-color: #e3e3e3;
-}
-.nav-main__menu-dropdown ul li a i:before {
-  position: relative;
-  right: -1px;
+  text-align: center;
+  font-size: 0.8em;
 }
 .nav-main__menu-dropdown ul li a:hover {
   background-color: #e3e3e3;
@@ -10326,6 +10324,52 @@ footer .container ul li + li {
 .map {
   width: 100%;
   height: 400px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px #e3e3e3 solid;
+  list-style: none;
+  margin-bottom: 0;
+}
+.sidebar li {
+  display: block;
+  border-bottom: 1px solid #fff;
+}
+.sidebar li.active {
+  background-color: #e3e3e3;
+}
+.sidebar li.active a i {
+  background-color: #fff;
+}
+.sidebar li:last-child {
+  border-bottom: 0px;
+}
+.sidebar li a {
+  font-size: 1rem;
+  display: flex;
+  color: #444444;
+  padding: 0.9rem;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.sidebar li a i {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.7rem;
+  line-height: 1.5rem;
+  background-color: #e3e3e3;
+  text-align: center;
+  font-size: 0.8em;
+}
+.sidebar li a:hover {
+  background-color: #e3e3e3;
+  text-decoration: none;
+}
+.sidebar li a:hover i {
+  background-color: #fff;
 }
 
 #home .bridge {
