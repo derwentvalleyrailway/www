@@ -1,0 +1,64 @@
+<header>
+    <nav class="nav-main">
+        <div class="container">
+            <a href="/" class="nav-main__logo"></a>
+            <div class="nav-main__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="">
+                <ul class="nav-main__menu-sub">
+                    <li>
+                        <a href="tel:+61362611946‬"><i class="fas fa-phone"></i> 03 6261 1946‬</a>
+                    </li>
+                    <li>
+                        <a href="mailto:‬info@dvr.org.au"><i class="fas fa-paper-plane"></i> info@dvr.org.au</a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/derwentvalleyrailway/"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/derwentvalleyrailway/"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <!--<li>
+                        <a href="#"><i class="fas fa-user"></i> Sign In</a>
+                    </li>-->
+                </ul>
+                <ul class="nav-main__menu">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            <li class="nav-main__menu-dropdown">
+                                <a href="#" class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                                    {{ .Name }} <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <div class="nav-main__menu-dropdown-container">
+                                    <ul>
+                                        {{ range .Children }}
+                                            <li class="nav-main__menu-dropdown-link {{if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                                <a href="{{ .URL }}">{{ .Name }}<i class="icon-angle-right"></i></a>
+                                            </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </li>
+                        {{ else }}
+                            <li class="nav-main__menu-link">
+                                <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                    {{ .Name }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                    <li class="nav-main__menu-button">
+                        <script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script><link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/><a class="giveforms-donation-button" id="donate-btn" href="https://derwentvalleyrailway.giveforms.com/dvr-website" >Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="nav-mobile">
+        
+    </nav>
+</header>

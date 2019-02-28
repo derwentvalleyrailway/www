@@ -11,9 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/app.js', 'static/js').sass('src/css/app.scss', 'static/css').options({
+mix
+.js('src/js/app.js', 'static/js')
+.js('src/js/turbolinks.js', 'static/js')
+.sass('src/css/app.scss', 'static/css').options({
     processCssUrls: false
- });
+});
 
 // Full API
 // mix.js(src, output);
