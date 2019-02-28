@@ -1,15 +1,16 @@
 {{ define "main" }}
 <main id="shop">
-	<header>
+	<section class="header header--slope-left-bottom">
 		<div class="container">
 			<div class="content">
 				<h1 class="display-4">Online Shop</h1>
 				<p class="lead">Help us fund the ongoing restoration and maintenance of rolling-stock and rail infrastructure by purchasing items from our online shop.</p>
 			</div>
 		</div>
-		<div class="shader"></div>
-	</header>
-    <section class="container py-3">
+		<div class="header__shader"></div>
+		<img src="/img/shop.jpg">
+	</section>
+  <section class="container--slope-right-top container pb-3">
 		<div class="row">
 			{{ range .Pages }}
 				{{ partial "shop/product.html" . }}
