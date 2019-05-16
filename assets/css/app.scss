@@ -1,11 +1,16 @@
-@import 'variables';
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import 'reset';
-@import 'fonts';
+//@import 'variables';
+//@import '../../node_modules/bootstrap/scss/bootstrap';
+//@import 'reset';
+//@import 'fonts';
+//@import 'mixins/slope';
 
-@import 'mixins/slope';
+@tailwind base;
 
+@tailwind components;
 
+@tailwind utilities;
+
+/*
 body {
 	display: flex;
 	flex-direction: column;
@@ -215,3 +220,5 @@ footer {
 @import 'tours';
 @import 'our-plan';
 @import '404';
+
+*/
