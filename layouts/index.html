@@ -1,59 +1,47 @@
 {{ define "main" }}
 <main id="home">
-    <section class="bg-cover bg-center" style="background-image: url(/img/adventure.jpg)">
-        <div class="container mx-auto p-4 py-48 flex flex-col justify-center items-center">
-            <h1 class="text-white text-6xl font-bold text-center">Preserving the Derwent Valley's<br>Rail Heritage<span></span></h1>
+    <section class="bg-cover bg-center mb-2" style="background-image: url(/img/adventure.jpg)">
+        <div class="container mx-auto p-4 py-32 sm:py-48 flex flex-col justify-center items-center">
+            <h1 class="text-white text-5xl sm:text-6xl font-bold text-center">Preserving the Derwent Valley's<br>Rail Heritage<span></span></h1>
             <div class="mt-6">
-                <a class="border-2 border-white px-5 py-3 text-white text-lg hover:bg-white hover:text-black mx-2 inline-block" href="/our-plan">Our Plan <i class="fas fa-chevron-right ml-1"></i></a>
-                <a class="border-2 border-white px-5 py-3 text-white text-lg hover:bg-white hover:text-black mx-2 inline-block" href="/tours">Visit Us <i class="fas fa-chevron-right ml-1"></i></a>
+                <a class="border-2 border-white px-6 py-3 text-white text-xl hover:bg-white hover:text-black mx-2 inline-block" href="/our-plan">Our Plan</a>
+                <a class="border-2 border-white px-6 py-3 text-white text-xl hover:bg-white hover:text-black mx-2 inline-block" href="/tours">Visit Us</a>
             </div>
         </div>
     </section>
-    <section class="image-block image-block--slope-right">
-        <div class="container">
-            <div class="row">
-            	<div class="image-block__image-container col-md-6">
-                    <img src="/img/who.jpg">
-                </div>
-	            <div class="image-block__content-container col-md-6">
-                    <h2>Who are we?</h2>
-                    <p>The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park.</p>
-                    <a class="btn btn-outline-dark" href="/about-us/history">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
-	            </div>
+    <section class="flex flex-col md:flex-row bg-gray-100 mb-2">
+        <div class="py-32 sm:py-64 md:w-1/2 flex-shrink-0 bg-cover bg-center" style="background-image: url(/img/who.jpg)"></div>
+        <div class="p-8 md:w-1/2 flex items-center">
+            <div class="max-w-md">
+                <h2 class="text-4xl font-bold">Who are we?</h2>
+                <p>The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park.</p>
+                <a class="border-2 border-gray-900 px-4 py-2 hover:bg-gray-900 hover:text-white mt-4 inline-block" href="/about-us/history">Learn More</a>
             </div>
         </div>
     </section>
-    <section class="image-block image-block--reverse image-block--bg-grey image-block--slope-left">
-        <div class="container">
-            <div class="row">
-                <div class="image-block__image-container col-md-6">
-                    <img src="/img/plan.jpg">
-                </div>
-                <div class="image-block__content-container col-md-6">
-                    <h2>Our Plan</h2>
-                    <p>The Derwent Valley railway line, from New Norfolk to Mt Field National Park, links many existing tourism operators in the Derwent Valley. We are committed to the re-establishment of the railway which will enable larger numbers of visitors to travel through the valley to experience these activities.</p>
-                    <a class="btn btn-outline-light" href="/our-plan">Learn More <i class="fas fa-chevron-right ml-1"></i></a>
-                </div>
+    <section class="flex flex-col md:flex-row bg-gray-900 text-white mb-2">
+        <div class="py-32 sm:py-64 md:w-1/2 flex-shrink-0 bg-cover bg-center md:order-last" style="background-image: url(/img/plan.jpg)"></div>
+        <div class="p-8 md:w-1/2 flex items-center md:justify-end">
+            <div class="md:text-right max-w-md">
+                <h2 class="text-4xl font-bold">Our Plan</h2>
+                <p>The Derwent Valley railway line, from New Norfolk to Mt Field National Park, links many existing tourism operators in the Derwent Valley. We are committed to the re-establishment of the railway which will enable larger numbers of visitors to travel through the valley to experience these activities.</p>
+                <a class="border-2 border-white px-4 py-2 hover:bg-white hover:text-gray-900 mt-4 inline-block" href="/our-plan">Learn More</a>
             </div>
         </div>
     </section>
-    <section class="image-block image-block--slope-right-top">
-        <div class="container">
-            <div class="row">
-                <div class="image-block__image-container col-md-6">
-                    <img src="/img/people.jpg">
-                </div>
-                <div class="image-block__content-container col-md-6">
-                    <h2>Volunteering</h2>
-                    <p>The Derwent Valley Railway is operated solely by volunteers from a diverse range of backgrounds, professions and age groups. If you would be interested in becoming involved, consider becoming a member online today.</p>
-                    <a class="btn btn-outline-dark" href="/about-us/membership">Become a Member <i class="fas fa-chevron-right ml-1"></i></a>
-                </div>
+    <section class="flex flex-col md:flex-row bg-red-800 text-red-100 mb-2">
+        <div class="py-32 sm:py-64 md:w-1/2 flex-shrink-0 bg-cover bg-bottom" style="background-image: url(/img/people.jpg)"></div>
+        <div class="p-8 md:w-1/2 flex items-center">
+            <div class="max-w-md">
+                <h2 class="text-4xl font-bold">Volunteering</h2>
+                <p>The Derwent Valley Railway is operated solely by volunteers from a diverse range of backgrounds, professions and age groups. If you would be interested in becoming involved, consider becoming a member online today.</p>
+                <a class="border-2 border-white px-4 py-2 hover:bg-white hover:text-gray-900 mt-4 inline-block" href="/about-us/membership">Become a Member</a>
             </div>
         </div>
     </section>
-    <section class="bridge">
-        <div class="wrapper">
-            <p class="container">"We are committed to the re-establishment of tourist rail in the Derwent Valley, linking attractions and experiences from New Norfolk to Mt Field National Park."</p>
+    <section class="flex py-32 px-4 bg-cover bg-bottom shader" style="background-image: url(/img/bridge.jpg)">
+        <div class="max-w-2xl mx-auto px-4 text-white text-center text-2xl">
+            "We are committed to the re-establishment of tourist rail in the Derwent Valley, linking attractions and experiences from New Norfolk to Mt Field National Park."
         </div>
     </section>
 </main>

@@ -2,6 +2,6 @@
 module.exports = {
     variants: {
         backgroundColor: ['hover', 'group-hover'],
-        display: ['group-hover'],
+        display: ['responsive', 'group-hover'],
     },
 }
