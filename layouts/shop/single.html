@@ -1,13 +1,13 @@
 {{ define "main" }}
 <main>
-    <section class="container">
-        <div class="row py-4">
-            <div class="col-sm-6">
+    <section class="container p-4 mx-auto">
+        <div class="md:flex -mx-4 items-center">
+            <div class="px-4 md:w-1/2">
                 <img src="{{ .Params.image }}" class="w-100">
             </div>
-            <div class="col-sm-6">
-                <h2>{{ .Title }}</h2>
-                <h5 class="text-muted">${{ .Params.price }}</h5>
+            <div class="px-4 md:w-1/2">
+                <h2 class="mb-0">{{ .Title }}</h2>
+                <p class="text-gray-600">${{ .Params.price }}</p>
                 {{ .Content }}
                 <div id='product-component-{{ .Params.shopify_id }}'></div>
                 <script type="text/javascript">
