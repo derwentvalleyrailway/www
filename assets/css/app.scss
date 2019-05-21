@@ -28,43 +28,6 @@
 }
 
 #menu-active {	
-	& + label {
-	
-		@apply h-5 bg-gray-600 w-8 relative border-white border-t-8 border-b-8;
-
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: -.7rem;
-			@apply h-1 bg-gray-600 w-8;
-		}
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: .7rem;
-			@apply h-1 bg-gray-600 w-8;
-		}
-
-		&:hover {
-			@apply bg-gray-900;
-
-			&:before {
-				@apply bg-gray-900;
-			}
-
-			&:after {
-				@apply bg-gray-900;
-			}
-		}
-
-		@screen md {
-			@apply hidden;
-		}
-	}
-
 	& + label + div {
 		background-color: rgba(26, 32, 44, 0);
 		transition: background-color 0.3s ease-in-out;
