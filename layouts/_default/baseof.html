@@ -40,21 +40,15 @@
 		<meta property="og:description" content="{{ .Params.description }}" /> 
 		<meta property="og:site_name" content="{{ .Site.Title }}" />
 		<meta property="fb:admins" content="100000126311332" />
-
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/>
 
 		{{ $style := resources.Get "css/app.scss" | toCSS | resources.PostCSS | minify | fingerprint }} 
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-		{{/* Turbolinks */}}
-		{{ if eq (getenv "HUGO_ENV") "production" }}
-			<script src="/js/turbolinks.js"></script>
-		{{ end }}
-
-		<script src="https://app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script>
-		<script src="/js/app.js"></script>
+		<script src="//app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script>
+		<script src="/js/app.js" type="text/javascript" defer></script>
 
 		{{ block "head" . }}{{ end }}
 	</head>
