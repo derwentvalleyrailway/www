@@ -8,11 +8,15 @@
 
 @tailwind components;
 
+main {
+    @apply flex-grow;
+}
+
 h1 {
 	@apply font-bold text-4xl mb-2 mt-3;
 
 	&:first-child {
-		@apply mt-0;
+		@apply -mt-3;
 	}
 }
 

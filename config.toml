@@ -3,7 +3,6 @@ title = "Derwent Valley Railway"
 baseURL = "https://dvr.org.au/"
 
 [params]
-	assetsBase = "/"
 	googleMapsApiKey = "AIzaSyD3mCeMb6721fhqX3A-HyEZ4vtBXiPRmBE"
 
 [menu]
