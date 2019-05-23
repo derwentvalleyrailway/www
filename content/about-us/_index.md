@@ -1,12 +1,13 @@
 +++
-title = "Who We Are"
+title = "About Us"
 
 [menu]
     [menu.main]
     parent = "about-us"
     weight = 2
 +++
-# Who We Are
+
+# Who are we?
 The Derwent Valley Railway Preservation Society was formed in 1990 to preserve Tasmanian railway heritage through the operation of a tourist railway. It purchased the assets of the Tasmanian Locomotive Company, who had been operating excursion trains on the Derwent Valley line.
 
 The society established its operating base at New Norfolk in 1993, after initially operating from the yard adjacent the Cadburys factory at Claremont.

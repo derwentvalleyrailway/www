@@ -1,6 +1,7 @@
 languageCode = "en-us"
 title = "Derwent Valley Railway"
 baseURL = "https://dvr.org.au/"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
 	googleMapsApiKey = "AIzaSyD3mCeMb6721fhqX3A-HyEZ4vtBXiPRmBE"

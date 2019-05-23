@@ -1,9 +1,9 @@
 {{ define "main" }}
 <main>
-    <section class="container p-4 mx-auto">
+    <section class="container p-8 mx-auto">
         <div class="md:flex -mx-4 items-center">
             <div class="px-4 md:w-1/2">
-                <img src="{{ .Params.image }}" class="w-100">
+                <img src="{{ .Site.Params.cloudinaryBase }}/c_fit,h_800,w_800{{ .Params.image }}" class="w-100">
             </div>
             <div class="px-4 md:w-1/2">
                 <h2 class="mb-0">{{ .Title }}</h2>

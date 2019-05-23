@@ -1,7 +1,8 @@
 +++
 shopify_id = "5457342983"
 title = "White T-Shirt"
-image = "https://cdn.shopify.com/s/files/1/1189/1530/products/T-Shirt_White_Small_grande.jpg?v=1457071828"
+image = "/v1558614673/shop/T-Shirt_White_Small_grande_pakmzb.jpg"
+scale_type = "pad"
 price = "25.00"
 +++
 White cotton t-shirt featuring original Tasmanian Government Railways artwork and the Derwent Valley Railway logo.
