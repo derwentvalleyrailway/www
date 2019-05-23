@@ -1,5 +1,5 @@
 # DVR Website
-The Derwent Valley Railway Preservation Society's public website. Built with Hugo and hosted on Netlify.
+The Derwent Valley Railway Preservation Society's public website. Built with Hugo and Tailwind, and hosted on Netlify.
 
 Contributions welcome! :grin:
 

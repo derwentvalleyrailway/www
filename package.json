@@ -1,5 +1,5 @@
 {
-  "name": "www-hugo",
+  "name": "www",
   "version": "1.0.0",
   "description": "Public facing website for the Derwent Valley Railway created with Hugo.",
   "scripts": {
@@ -17,7 +17,6 @@
     }
   ],
   "license": "UNLICENSED",
-  "private": true,
   "homepage": "https://github.com/derwentvalleyrailway/www",
   "dependencies": {
     "autoprefixer": "^9.5.1",

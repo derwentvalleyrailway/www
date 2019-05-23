@@ -1,10 +1,10 @@
-<section class="container p-8 md:py-16 mx-auto max-w-sm sm:max-w-4xl">
+<section class="container p-8 md:py-16 mx-auto max-w-sm sm:max-w-4xl -mt-2">
     <h1 class="text-center mb-4 sm:text-left sm:mb-2">Latest News</h1>
     <div class="flex flex-wrap -mx-2">
         {{ range first 6 (where .Site.RegularPages "Section" "news") }}
             <div class="px-2 mb-4 w-full sm:w-1/2 md:w-1/3">
-                <a class="block bg-red-500 relative w-full no-underline group hover:shadow-lg text-shadow-md" href="{{ .RelPermalink }}" style="padding-bottom: 100%">
-                    <div class="absolute p-6 flex flex-col justify-between w-full h-full">
+                <a class="block bg-cover bg-center relative w-full no-underline group hover:shadow-lg text-shadow-md" href="{{ .RelPermalink }}" style="padding-bottom: 100%; background-image: url('{{ .Site.Params.cloudinaryBase }}/c_fill,g_auto,h_800,w_800{{ .Params.image }}');">
+                    <div class="absolute p-6 flex flex-col justify-between w-full h-full" style="background-color: rgba(0,0,0,0.3)">
                         <p class="text-gray-200 text-sm">{{ .Date.Format "January 2, 2006" }}</p>
                         <h3 class="text-white mb-0 group-hover:underline">{{ .Title }}</h3>
                     </div>
