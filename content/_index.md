@@ -2,10 +2,12 @@
 title = "Home"
 +++
 
-{{% image-card img-url="/img/who.jpg" button-url="/about-us/history" button-title="Learn More" %}}
+{{% image-card img-url="/img/who.jpg" button-url="/about-us/history" button-title="Learn More" class="bg-gray-100 mb-0" %}}
 # Who are we?
 The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park.
 {{% /image-card %}}
+
+{{< latest-news >}}
 
 {{% image-card img-url="/img/plan.jpg" button-url="/our-plan" button-title="Learn More" button-class="button-light" reverse="true" class="bg-gray-900 text-white" %}}
 # Our Plan
