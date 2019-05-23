@@ -41,8 +41,8 @@
 		<meta property="og:site_name" content="{{ .Site.Title }}" />
 		<meta property="fb:admins" content="100000126311332" />
 		
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://app.giveforms.com/giveforms_embed.css"/>
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="//app.giveforms.com/giveforms_embed.css"/>
 
 		{{ $style := resources.Get "css/app.scss" | toCSS | resources.PostCSS | minify | fingerprint }} 
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}">

@@ -20,11 +20,9 @@
   "private": true,
   "homepage": "https://github.com/derwentvalleyrailway/www",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.1",
     "autoprefixer": "^9.5.1",
     "cross-env": "^5.2.0",
     "postcss-cli": "^6.1.2",
-    "tailwindcss": "^1.0.1",
-    "turbolinks": "^5.2.0"
+    "tailwindcss": "^1.0.1"
   }
 }
