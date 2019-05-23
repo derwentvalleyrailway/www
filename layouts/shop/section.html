@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main id="shop">
-	<section class="bg-cover bg-center mb-2" style="background-image: url(/img/shop.jpg)">
+	<section class="bg-cover bg-center" style="background-image: url(/img/shop.jpg)">
 		<div class="container mx-auto p-4 py-32 sm:py-48 flex flex-col justify-center items-center">
 			<h1 class="text-white text-shadow-md text-5xl md:text-6xl font-bold text-center">{{ .Title }}</h1>
 		</div>
@@ -8,8 +8,8 @@
 	
 	{{ .Content }}
 
-	<section class="container p-8 mx-auto">
-		<div class="mx-auto max-w-xs md:max-w-full">
+	<section class="container p-8 pt-0 mx-auto">
+		<div class="mx-auto max-w-sm md:max-w-full">
 			<div class="flex flex-wrap -mx-2">
 				{{ range .Pages }}
 					{{ partial "shop/product.html" . }}
