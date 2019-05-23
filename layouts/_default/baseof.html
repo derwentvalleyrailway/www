@@ -47,15 +47,17 @@
 		{{ $style := resources.Get "css/app.scss" | toCSS | resources.PostCSS | minify | fingerprint }} 
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-		<script src="//app.giveforms.com/install-popup-button.js" type="text/javascript" defer></script>
-		<script src="/js/app.js" type="text/javascript" defer></script>
-
 		{{ block "head" . }}{{ end }}
 	</head>
 	<body class="font-sans leading-normal text-gray-900 min-h-screen pt-24 md:pt-0 flex flex-col">
         {{ partial "header" . }}
         {{ block "main" . }}{{ end }}
-        {{ partial "footer" . }}
+		{{ partial "footer" . }}
+		
+		{{ $js := resources.Get "js/app.js" | minify | fingerprint }} 
+		<script src="{{ $js.RelPermalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}"></script>
+
+		<script src="//app.giveforms.com/install-popup-button.js" type="text/javascript" onload="checkDonate()" defer></script>
 
 		{{/* Google Analytics */}}
 		{{ if eq (getenv "HUGO_ENV") "production" }}

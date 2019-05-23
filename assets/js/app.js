@@ -1,4 +1,6 @@
 // Donate Link
-if(window.location.hash == '#donate') {
-	document.getElementById('donate-btn').click();
+function checkDonate() {
+	if(window.location.hash == '#donate') {
+		document.getElementById('donate-btn').click();
+	}
 }
