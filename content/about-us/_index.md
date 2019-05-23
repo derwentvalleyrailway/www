@@ -1,5 +1,5 @@
 +++
-title = "About Us"
+title = "History"
 
 [menu]
     [menu.main]
