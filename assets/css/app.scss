@@ -6,6 +6,10 @@ main {
     @apply flex-grow;
 }
 
+header nav {
+	max-width: 1024px;
+}
+
 h1 {
 	@apply font-bold text-4xl mb-2 mt-3;
 
