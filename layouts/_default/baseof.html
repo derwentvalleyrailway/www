@@ -54,7 +54,8 @@
         {{ block "main" . }}{{ end }}
 		{{ partial "footer" . }}
 		
-		{{ $js := resources.Get "js/app.js" | minify | fingerprint }} 
+		{{ $app := resources.Get "js/app.js" }}
+		{{ $js := slice $app | resources.Concat "js/app.js" | minify | fingerprint }} 
 		<script src="{{ $js.RelPermalink }}" type="text/javascript" integrity="{{ $js.Data.Integrity }}"></script>
 
 		<script src="//app.giveforms.com/install-popup-button.js" type="text/javascript" onload="checkDonate()" defer></script>
