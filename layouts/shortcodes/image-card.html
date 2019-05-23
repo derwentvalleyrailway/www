@@ -1,0 +1,21 @@
+<!--
+    Variables:
+    image-url
+    button-url
+    button-title
+    button-class
+    reverse
+    class
+-->
+
+<section class="flex flex-col md:flex-row mb-2 {{ with .Get "class"}}{{.}}{{else}}bg-gray-100{{ end }}">
+    <div class="py-32 sm:py-64 md:w-1/2 flex-shrink-0 bg-cover bg-center {{ if .Get "reverse" }}md:order-last{{ end }}" style="background-image: url({{ .Get "img-url" }})"></div>
+    <div class="p-8 md:w-1/2 flex items-center {{ if .Get "reverse" }}md:justify-end{{ end }}">
+        <div class="max-w-md {{ if .Get "reverse" }}md:text-right{{ end }}">
+            {{ .Inner }}
+            {{ if .Get "button-url"}}
+                <a class="button mt-4 {{ with .Get "button-class"}}{{.}}{{ end }}" href="{{ .Get "button-url" }}">{{ .Get "button-title" }}</a>
+            {{ end }}
+        </div>
+    </div>
+</section>

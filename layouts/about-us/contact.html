@@ -1,64 +1,44 @@
+{{ define "head" }}
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.googleMapsApiKey }}&signed_in=false&callback=loadMap"></script>
+{{ end }}
+
 {{ define "main" }}
 <main>
-	<section class="container mt-3">
-		<div class="row">
-			<div class="col-4 col-xl-3 d-none d-md-block">
-				{{ partial "sidebar.html" . }}
+	<section class="container p-8 mx-auto">
+		<div class="mb-3">
+			{{ .Content }}
+		</div>
+		<div class="map mb-3 w-full h-64"></div>
+		<div class="flex flex-wrap -mx-2 mb-3">
+			<div class="w-full md:w-1/2 px-2">
+				<h3>New Norfolk Station and Workshop</h3>
+				<p>
+					Station Street, New Norfolk<br>
+					7140, Tasmania, Australia<br>
+				</p>
+				<p>
+					Open Wednesday and Saturday<br>
+					<b>10:00 am - 5:00 pm</b>
+				</p>
 			</div>
-			<div class="col">
-				<div class="row">
-					<div class="col">
-						{{ .Content }}
-					</div>
-				</div>
-				<div class="row mb-3">
-					<div class="col">
-						<div id="contact-map"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<h3>New Norfolk Station and Workshop</h3>
-						<p>
-							Station Street, New Norfolk<br>
-							7140, Tasmania, Australia<br>
-						</p>
-						<p>
-							Open Wednesday and Saturday<br>
-							<b>10:00 am - 5:00 pm</b>
-						</p>
-					</div>
-					<div class="col-md-6">
-						<h3>Postal Address</h3>
-						<p>
-							PO Box 478<br>
-							New Norfolk, 7140<br>
-							Tasmania, Australia
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<h3>Phone</h3>
-						<p>+61 3 6261 1946</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<h3>General Enquires</h3>
-						<p><a href="mailto:dvr@dvr.org.au">dvr@dvr.org.au</a></p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<h3>Website and Technical Enquiries</h3>
-						<p><a href="mailto:admin@dvr.org.au">admin@dvr.org.au</a></p>
-					</div>
-				</div>
-        </div>
+			<div class="w-full md:w-1/2 px-2">
+				<h3>Postal Address</h3>
+				<p>
+					PO Box 478<br>
+					New Norfolk, 7140<br>
+					Tasmania, Australia
+				</p>
+			</div>
+		</div>
+		<h3>Phone</h3>
+		<p>+61 03 6261 1946</p>
+		<h3>General Enquires</h3>
+		<p><a href="mailto:dvr@dvr.org.au">dvr@dvr.org.au</a></p>
+		<h3>Website and Technical Enquiries</h3>
+		<p><a href="mailto:admin@dvr.org.au">admin@dvr.org.au</a></p>
 	</section>
 	<script>
-		function initMap() {
+		function loadMap() {
 			var lat_lng = {lat: -42.776440, lng: 147.055414};
 			
 			var styles = [
@@ -75,7 +55,7 @@
 				}
 			];
 			
-			var map = new google.maps.Map(document.getElementById('contact-map'), {
+			var map = new google.maps.Map(document.querySelector('.map'), {
 				scrollwheel: false,
 				zoom: 14,
 				center: lat_lng,
@@ -86,10 +66,9 @@
 			var marker = new google.maps.Marker({
 				position: lat_lng,
 				map: map,
-				title: 'Derwent Valley Railway Inc.'
+				title: 'Derwent Valley Railway Preservation Society Inc.'
 			});
 		}
 	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.googleMapsApiKey }}&signed_in=false&callback=initMap"></script>
 </main>
 {{ end }}

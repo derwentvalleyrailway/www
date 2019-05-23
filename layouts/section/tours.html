@@ -1,112 +1,12 @@
 {{ define "main" }}
 <main id="tours">
-	<header class="header">
-		<div class="container">
-			<div class="content">
-				<h1 class="display-4">Guided Tours</h1>
-				<p class="lead">Be guided back in time and discover the rich history of railways in Tasmania and the Derwent Valley.</p>
-			</div>
+	<section class="bg-cover bg-center mb-2" style="background-image: url(/img/workshop.jpg)">
+		<div class="container mx-auto p-4 py-32 sm:py-48 flex flex-col justify-center items-center">
+			<h1 class="text-white text-shadow-md text-5xl md:text-6xl font-bold text-center">{{ .Title }}</h1>
 		</div>
-		<div class="header__shader"></div>
-	</header>
-    <section class="image-block image-block--reverse">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 image-block__image-container">
-					<div class="img discover"></div>
-					<img src="/img/discover.jpg">
-				</div>
-    			<div class="col-md-6 image-block__content-container">
-					<h2>Discover</h2>
-					<p>Follow one of our volunteer guides as they lead you through our extensive collection of locomotives and rolling-stock. Uncover their unique histories and learn about the crucial role of railways in the development and future of the Derwent Valley.</p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    <section class="image-block image-block--gradient image-block--reverse">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 image-block__image-container">
-					<img src="/img/yard.jpg">
-				</div>
-    			<div class="col-md-6 image-block__content-container">
-					<h2>Explore</h2>
-					<p>Explore our New Norfolk yard and workshop facilities. See the inner workings of our steam and diesel locomotives. Discover what’s involved in the restoration and maintenance of our heritage collection of rolling-stock.</p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    <section class="image-block">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 image-block__image-container">
-					<div id="contact-map" class="image-block__map"></div>
-				</div>
-    			<script>
-		            function initMap() {
-			            var dvr_location = new google.maps.LatLng({lat: -42.776440, lng: 147.055414});
-		                var hobart_location = new google.maps.LatLng({lat: -42.881903, lng: 147.323814});
-		                var bounds = new google.maps.LatLngBounds();
-		                bounds.extend(dvr_location);
-		                bounds.extend(hobart_location);
-		                
-		                var styles = [
-		                    {
-		                        "featureType": "transit.station",
-		                        "stylers": [
-		                            { "visibility": "off" }
-		                        ]
-		                    },{
-		                        "featureType": "poi.attraction",
-		                        "stylers": [
-		                            { "visibility": "off" }
-		                        ]
-		                    }
-		                ];
-		                
-		                var map = new google.maps.Map(document.getElementById('contact-map'), {
-			                scrollwheel: false,
-		                    zoom: 9,
-		                    center: bounds.getCenter(),
-		                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-		                    styles: styles
-		                });
-		                
-		                google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-			                map.setZoom(map.getZoom() - 1);
-		                });
-		                map.fitBounds(bounds);
-		                
-		                var marker = new google.maps.Marker({
-		                    position: dvr_location,
-		                    map: map,
-		                    title: 'Derwent Valley Railway Inc.'
-		                });
-		            }
-		            window.addEventListener("resize", initMap);
-		        </script>
-		        <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.googleMapsApiKey }}&signed_in=false&callback=initMap"></script>
-    			<div class="col-md-6 image-block__content-container">
-					<h2>Getting There</h2>
-					<p>Our collection and workshop facilities are based adjacent to New Norfolk Station, a scenic 35 minute drive from Hobart’s CBD. Tours operate from 10am until 5pm Wednesday and Saturday.</p>
-					<a class="btn btn-outline-dark" href="/about-us/contact">Contact Us <i class="icon-angle-right"></i></a>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    <section class="image-block image-block--reverse">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 image-block__image-container">
-					<img src="/img/groups.jpg">
-				</div>
-    			<div class="col-md-6 image-block__content-container">
-					<h2>Groups</h2>
-					<p>Specialised tours for large groups, bus tours and school excursions are available upon request. We can even organise lunch, morning or afternoon tea catering for you to enjoy during your visit.</p>
-					<a class="btn btn-outline-dark" href="/about-us/contact">Contact Us <i class="icon-angle-right"></i></a>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+	</section>
+	
+	{{ .Content }}
+
 </main>
 {{ end }}

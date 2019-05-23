@@ -1,5 +1,5 @@
 +++
-title = "Cookies"
+title = "Cookies Policy"
 menu = "footer"
 weight = 2
 +++
