@@ -3,7 +3,7 @@
     <section class="container p-8 mx-auto max-w-4xl">
         <div class="border">
             <div class="py-48 bg-cover bg-center" style="background-image: url('{{ .Site.Params.cloudinaryBase }}/c_fill,g_auto,h_800,w_1200{{ .Params.image }}');"></div>
-            <div class="p-8">
+            <div class="p-4 sm:p-8">
                 <p class="text-gray-600">{{ .Date.Format "January 2, 2006" }} &middot; {{ .ReadingTime }} min read</p>
                 <div class="news-content">
                     {{ .Content }}
