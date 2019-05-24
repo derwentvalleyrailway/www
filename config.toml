@@ -8,6 +8,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 	cloudinaryBase = "https://res.cloudinary.com/dvrailway/image/upload"
 	description = "The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park."
 	image = "/v1558609700/www/who_mzceyi.jpg"
+	instagramApiKey = "2873942248.1677ed0.e1a3768d0bab413d99f2e49e454272ba"
 
 [menu]
 	[[menu.main]]

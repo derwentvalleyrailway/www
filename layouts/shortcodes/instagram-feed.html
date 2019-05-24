@@ -1,0 +1,21 @@
+<section class="container p-8 py-16 mx-auto sm:max-w-4xl -mt-2">
+    <div class="flex flex-wrap -mx-2 -mb-4">
+        <div class="mb-4 px-2 w-full sm:w-1/2">
+            <h1 class="text-center sm:text-left mb-0">#dvrailway</h1>
+        </div>
+        <div class="mb-4 px-2 w-full sm:w-1/2 flex justify-center sm:justify-end items-center order-last sm:order-none">
+            <a class="no-underline text-gray-600 hover:text-red-900" href="/news"><i class="fab fa-instagram mr-1"></i> Follow us on Instagram</a>
+        </div>
+        {{ $instagram := getJSON (printf "https://api.instagram.com/v1/users/self/media/recent/?count=8&access_token=%s" .Site.Params.instagramApiKey) }}
+        {{ range $instagram.data }}
+            <div class="px-2 mb-4 w-1/2 md:w-1/4">
+                <a class="block bg-cover bg-center relative w-full no-underline group hover:shadow-lg text-shadow-md" href="{{ .link }}" style="padding-bottom: 100%; background-image: url('{{ .images.standard_resolution.url }}');">
+                    <div class="hidden absolute p-6 group-hover:flex flex-col justify-between w-full h-full" style="background-color: rgba(0,0,0,0.3)">
+                        <p class="text-gray-100 text-sm leading-none">{{ (time (int .created_time)).Format "January 2, 2006" }}</p>
+                        <p class="text-gray-100 text-sm self-end leading-none"><i class="far fa-heart"></i> {{ .likes.count }} <i class="ml-3 far fa-comment"></i> {{ .comments.count }}</p>
+                    </div>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>
