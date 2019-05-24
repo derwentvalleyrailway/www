@@ -10,4 +10,4 @@ Contributions welcome! :grin:
 * [Node.js](https://nodejs.org/en/download/)
 
 ## Development
-First run `npm install` and then run `npm run watch` in one terminal session and `npm run server` in another. 
+First run `npm install` and then run `hugo serve`.
