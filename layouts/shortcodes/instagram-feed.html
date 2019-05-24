@@ -4,7 +4,7 @@
             <h1 class="text-center sm:text-left mb-0">#dvrailway</h1>
         </div>
         <div class="mb-4 px-2 w-full sm:w-1/2 flex justify-center sm:justify-end items-center order-last sm:order-none">
-            <a class="no-underline text-gray-600 hover:text-red-900" href="/news"><i class="fab fa-instagram mr-1"></i> Follow us on Instagram</a>
+            <a class="no-underline text-gray-600 hover:text-red-900" href="https://instagram.com/derwentvalleyrailway/"><i class="fab fa-instagram mr-1"></i> Follow us on Instagram</a>
         </div>
         {{ $instagram := getJSON (printf "https://api.instagram.com/v1/users/self/media/recent/?count=8&access_token=%s" .Site.Params.instagramApiKey) }}
         {{ range $instagram.data }}
