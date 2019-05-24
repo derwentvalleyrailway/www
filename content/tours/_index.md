@@ -2,6 +2,8 @@
 title = "Visit Us"
 menu = "main"
 weight = 2
+image = "/v1558678782/www/workshop_iqbub2.jpg"
+description = "Explore our New Norfolk yard and workshop facilities. See the inner workings of our steam and diesel locomotives. Discover what’s involved in the restoration and maintenance of our heritage collection of rolling-stock."
 +++
 
 {{% image-card img-url="/img/discover.jpg" %}}
