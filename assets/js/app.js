@@ -1,7 +1,7 @@
 // Donate Link
 function checkDonate() {
 	if(window.location.hash == '#donate') {
-		document.getElementById('donate-btn').click();
+		document.querySelector('.giveforms-donation-button').click();
 	}
 }
 
