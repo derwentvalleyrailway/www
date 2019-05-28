@@ -1,11 +1,10 @@
 +++
-title = "Contact"
 layout = "contact"
+title = "Contact"
+[menu.main]
+parent = "About Us"
+weight = 5
 
-[menu]
-    [menu.main]
-    parent = "about-us"
-    weight = 5
 +++
 # Contact
 

@@ -1,7 +1,9 @@
 +++
 title = "Terms & Conditions"
-menu = "footer"
 weight = 3
+[menu.footer]
+weight = 2
+
 +++
 # Terms & Conditions
 By accessing and using the Derwent Valley Railway Inc website (owned by Derwent Valley Railway Inc ABN 61 868 683 773) you agree to be bound by and abide by these terms and conditions.

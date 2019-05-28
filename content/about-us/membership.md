@@ -1,10 +1,9 @@
 +++
 title = "Membership"
+[menu.main]
+parent = "About Us"
+weight = 3
 
-[menu]
-    [menu.main]
-    parent = "about-us"
-    weight = 3
 +++
 # Membership
 We always welcome new members to the organisation. Your membership will contribute to the ongoing restoration of locomotives, rolling-stock and related infrastructure.
