@@ -1,7 +1,9 @@
 +++
 title = "Cookies Policy"
-menu = "footer"
 weight = 2
+[menu.footer]
+weight = 1
+
 +++
 # Cookies
 Last updated on the 21st of February 2017.

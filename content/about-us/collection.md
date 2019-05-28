@@ -1,9 +1,9 @@
 +++
 title = "Our Collection"
-[menu]
-    [menu.main]
-    parent = "about-us"
-    weight = 1
+[menu.main]
+parent = "About Us"
+weight = 1
+
 +++
 # Our Collection
 

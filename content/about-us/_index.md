@@ -1,12 +1,10 @@
 +++
 title = "History"
+[menu.main]
+parent = "About Us"
+weight = 2
 
-[menu]
-    [menu.main]
-    parent = "about-us"
-    weight = 2
 +++
-
 # Who are we?
 The Derwent Valley Railway Preservation Society was formed in 1990 to preserve Tasmanian railway heritage through the operation of a tourist railway. It purchased the assets of the Tasmanian Locomotive Company, who had been operating excursion trains on the Derwent Valley line.
 

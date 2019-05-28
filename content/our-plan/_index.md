@@ -1,11 +1,12 @@
 +++
-title = "Our Plan"
-menu = "main"
-weight = 1
-image = "/v1558678781/www/river_irjvex.jpg"
 description = "The Derwent Valley Railway has the unique opportunity to become the backbone of the Derwent Valley, linking many existing high quality tourism attractions and experiences."
-+++
+image = "/v1558678781/www/river_irjvex.jpg"
+title = "Our Plan"
+weight = 1
+[menu.main]
+weight = 2
 
++++
 {{% image-card img-url="/img/opportunity.jpg" %}}
 # A Unique Opportunity
 The Derwent Valley Railway has the unique opportunity to become the backbone of the Derwent Valley, linking many existing high quality tourism attractions and experiences. Rail has the capacity to transport large volumes of visitors and drive visitor-ship in the local area.

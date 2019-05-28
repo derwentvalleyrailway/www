@@ -1,28 +1,26 @@
 +++
-title = "Governance"
 layout = "governance"
-
+title = "Governance"
+[menu.main]
+parent = "About Us"
+weight = 4
 [[officers]]
+email = "paul.jones@dvr.org.au"
 name = "Paul Jones"
 position = "Chairman"
-email = "paul.jones@dvr.org.au"
 [[officers]]
+email = "dennis.hewitt@dvr.org.au"
 name = "Dennis Hewitt"
 position = "Deputy Chairman"
-email = "dennis.hewitt@dvr.org.au"
 [[officers]]
+email = "owen.andrews@dvr.org.au"
 name = "Owen Andrews"
 position = "Secretary"
-email = "owen.andrews@dvr.org.au"
 [[officers]]
+email = "charles.court@dvr.org.au"
 name = "Charles Court"
 position = "Treasurer"
-email = "charles.court@dvr.org.au"
 
-[menu]
-    [menu.main]
-    parent = "about-us"
-    weight = 4
 +++
 # Governance
 

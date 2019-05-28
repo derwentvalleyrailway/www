@@ -1,7 +1,9 @@
 +++
 title = "Privacy Policy"
-menu = "footer"
 weight = 1
+[menu.footer]
+weight = 3
+
 +++
 # Privacy Policy
 Last updated on the 21st of February 2017.
