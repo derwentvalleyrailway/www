@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main id="shop">
+	<section class="bg-cover bg-center mb-2" style="background-image: url('{{ .Site.Params.cloudinaryBase }}/c_fill,g_south,h_800,w_1200{{ .Params.image }}')">
+		<div class="container mx-auto p-4 py-32 sm:py-48 flex flex-col justify-center items-center">
+			<h1 class="text-white text-shadow-md text-5xl md:text-6xl font-bold text-center">{{ .Title }}</h1>
+		</div>
+	</section>
+	
+	{{ .Content }}
+</main>
+{{ end }}

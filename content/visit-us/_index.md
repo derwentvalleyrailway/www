@@ -2,11 +2,11 @@
 description = "Explore our New Norfolk yard and workshop facilities. See the inner workings of our steam and diesel locomotives. Discover what’s involved in the restoration and maintenance of our heritage collection of rolling-stock."
 image = "/v1558678782/www/workshop_iqbub2.jpg"
 title = "Visit Us"
-weight = 2
+layout = "jumbo"
 [menu.main]
 weight = 1
-
 +++
+
 {{% image-card img-url="/img/discover.jpg" %}}
 # Discover
 Follow one of our volunteer guides as they lead you through our extensive collection of locomotives and rolling-stock. Uncover their unique histories and learn about the crucial role of railways in the development and future of the Derwent Valley.

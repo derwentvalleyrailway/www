@@ -14,10 +14,12 @@ burger.addEventListener('click', function (event) {
 	if(sidebarActive) {
 		this.classList.remove('active');
 		sidebar.classList.remove('active');
+		document.body.classList.remove('overflow-hidden');
 		sidebarActive = false;
 	} else {
 		this.classList.add('active');
 		sidebar.classList.add('active');
+		document.body.classList.add('overflow-hidden');
 		sidebarActive = true;
 	}
 });
