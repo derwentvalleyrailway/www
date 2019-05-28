@@ -7,7 +7,6 @@ layout = "jumbo"
 weight = 1
 +++
 
-+++
 {{% image-card img-url="/img/discover.jpg" %}}
 # Discover
 Follow one of our volunteer guides as they lead you through our extensive collection of locomotives and rolling-stock. Uncover their unique histories and learn about the crucial role of railways in the development and future of the Derwent Valley.
