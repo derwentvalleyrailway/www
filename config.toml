@@ -7,11 +7,6 @@ identifier = "github"
 name = "Contribute on GitHub"
 url = "https://github.com/derwentvalleyrailway/www"
 weight = 4
-[[menu.main]]
-identifier = "about-us"
-name = "About Us"
-url = "/about-us/"
-weight = 5
 [params]
 cloudinaryBase = "https://res.cloudinary.com/dvrailway/image/upload"
 description = "The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park."
