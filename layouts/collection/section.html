@@ -5,10 +5,10 @@
     </section>
     <section class="container p-8 pt-0 mx-auto">
         <div class="flex flex-wrap -mx-2 -mb-4">
-            {{ range .Params.categories }}
-                <div class="px-2 mb-4 w-1/4">
-                    <a class="block bg-cover bg-center relative w-full no-underline hover:shadow-lg text-shadow-md" href="#{{ .key }}" style="padding-bottom: 100%; background-image: url('{{ .images.standard_resolution.url }}');">
-                        <div class="absolute h-full w-full top-0 left-0 flex justify-center items-center text-white font-bold" style="background-color: rgba(0,0,0,0.3)">
+            {{ range .Params.groups }}
+                <div class="px-2 mb-4 w-1/2 md:w-1/3 lg:w-1/4">
+                    <a class="block bg-cover bg-center relative w-full no-underline hover:shadow-lg text-shadow-md" href="#{{ .key }}" style="padding-bottom: 100%; background-image: url('{{ $.Site.Params.cloudinaryBase }}/c_fill,g_auto,h_800,w_800{{ .image }}');">
+                        <div class="absolute h-full w-full top-0 left-0 flex justify-center items-center text-white font-bold p-6 text-center" style="background-color: rgba(0,0,0,0.3)">
                             {{ .title }}
                         </div>
                     </a>
@@ -17,15 +17,49 @@
         </div>
     </section>
     <section class="container p-8 pt-0 mx-auto">
-        {{ range .Params.categories }}
-            <h2>{{ .title }}</h2>
-            {{ $bundle := .Site.GetPage (printf "/collection/" .key) }}
-            {{ $pages := $bundle.Resources.Match "*" }}
-            {{ range $pages }}
-                <h3>{{ .Title }}</h3>
-                {{ .Content }}
+        <div class="max-w-3xl">
+            {{ range .Params.groups }}
+                <h2 id="{{ .key }}">{{ .title }}</h2>
+                {{ $bundle := $.Site.GetPage (printf "/collection/%s" .key) }}
+                {{ $pages := $bundle.Resources.Match "*" }}
+                {{ range $pages }}
+                    <div class="border bg-gray-300">
+                        <div class="flex justify-between items-center p-6 expand cursor-pointer group">
+                            <h3 class="mb-0">
+                                {{ .Title }}
+                            </h3>
+                            <div class="text-lg text-gray-600 group-hover:text-gray-900">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="collapse">
+                            <div class="px-6 pb-6">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
             {{ end }}
-        {{ end }}
+        </div>
     </section>
 </main>
+{{ end }}
+
+{{ define "js" }}
+<script>
+    document.querySelector('.expand').addEventListener('click', function (event) {
+        let collapse = this.parentElement.querySelector('.collapse');
+        let icon = this.querySelector('.fas');
+
+        if(collapse.classList.contains('active')) {
+            collapse.classList.remove('active');
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        } else {
+            collapse.classList.add('active');
+            icon.classList.add('fa-minus');
+            icon.classList.remove('fa-plus');
+        }
+    });
+</script>
 {{ end }}

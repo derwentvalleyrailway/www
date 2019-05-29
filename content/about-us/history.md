@@ -1,5 +1,5 @@
 +++
-title = "History"
+title = "History & Heritage"
 [menu.main]
 parent = "About Us"
 weight = 2

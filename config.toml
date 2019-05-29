@@ -2,14 +2,16 @@ baseURL = "https://dvr.org.au/"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 languageCode = "en-us"
 title = "Derwent Valley Railway"
-[[menu.footer]]
-identifier = "github"
-name = "Contribute on GitHub"
-url = "https://github.com/derwentvalleyrailway/www"
-weight = 4
+
 [params]
 cloudinaryBase = "https://res.cloudinary.com/dvrailway/image/upload"
 description = "The Derwent Valley Railway was established in 1990 to preserve the Derwent Valley railway line. We are a not for profit, volunteer based organisation. Currently, we are working closely with the state government to resume services from New Norfolk to Mt Field National Park."
 googleMapsApiKey = "AIzaSyD3mCeMb6721fhqX3A-HyEZ4vtBXiPRmBE"
 image = "/v1558609700/www/who_mzceyi.jpg"
 instagramApiKey = "2873942248.1677ed0.e1a3768d0bab413d99f2e49e454272ba"
+
+[[menu.footer]]
+identifier = "github"
+name = "Contribute on GitHub"
+url = "https://github.com/derwentvalleyrailway/www"
+weight = 4
