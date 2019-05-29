@@ -14,6 +14,8 @@ sections:
   label: News
   create: all
   match: "**/*"
+  templates:
+  - news-article
 - type: directory
   path: content/our-plan
   label: Our plan
