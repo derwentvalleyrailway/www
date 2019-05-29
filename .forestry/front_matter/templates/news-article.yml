@@ -4,13 +4,23 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Published Date
+  config:
+    date_format: DD/MM/YYYY
+    required: true
 - type: textarea
   name: description
-  label: description
+  label: Description
+  description: A short paragraph used as an introduction to the article.
+  config:
+    required: true
 - type: file
   name: image
-  label: image
+  label: Image
+  description: Used as the header for the article, and in search engines and on social
+    media.
