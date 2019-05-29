@@ -3,6 +3,10 @@ title = "Our Collection"
 [menu.main]
 parent = "About Us"
 weight = 1
+
+[[categories]]
+title = "Locomotives"
+key = "locomotives"
 +++
 
 # Our Collection

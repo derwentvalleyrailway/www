@@ -2,12 +2,29 @@
 <main>
     <section class="container p-8 mx-auto">
         {{ .Content }}
-
-        {{ $headless := .Site.GetPage "/collection/locomotives" }}
-        {{ $reusablePages := $headless.Resources.Match "*" }}
-        {{ range $reusablePages }}
-            <h3>{{ .Title }}</h3>
-            {{ .Content }}
+    </section>
+    <section class="container p-8 pt-0 mx-auto">
+        <div class="flex flex-wrap -mx-2 -mb-4">
+            {{ range .Params.categories }}
+                <div class="px-2 mb-4 w-1/4">
+                    <a class="block bg-cover bg-center relative w-full no-underline hover:shadow-lg text-shadow-md" href="#{{ .key }}" style="padding-bottom: 100%; background-image: url('{{ .images.standard_resolution.url }}');">
+                        <div class="absolute h-full w-full top-0 left-0 flex justify-center items-center text-white font-bold" style="background-color: rgba(0,0,0,0.3)">
+                            {{ .title }}
+                        </div>
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+    <section class="container p-8 pt-0 mx-auto">
+        {{ range .Params.categories }}
+            <h2>{{ .title }}</h2>
+            {{ $bundle := .Site.GetPage (printf "/collection/" .key) }}
+            {{ $pages := $bundle.Resources.Match "*" }}
+            {{ range $pages }}
+                <h3>{{ .Title }}</h3>
+                {{ .Content }}
+            {{ end }}
         {{ end }}
     </section>
 </main>
