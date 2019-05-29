@@ -22,7 +22,7 @@
                 {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
                         <div class="relative group">
-                            <a href="#" class="leading-loose px-3 py-1 group-hover:bg-gray-200 block ml-1 flex justify-between items-center no-underline {{ if $currentPage.HasMenuCurrent "main" . }}bg-gray-200{{ end }}">
+                            <a href={{ .URL }} class="leading-loose px-3 py-1 group-hover:bg-gray-200 block ml-1 flex justify-between items-center no-underline {{ if $currentPage.HasMenuCurrent "main" . }}bg-gray-200{{ end }}">
                                 {{ .Name }} <i class="fas fa-chevron-down ml-2 text-gray-600 text-base"></i>
                             </a>
                             <div class="hidden group-hover:block absolute right-0">
@@ -50,7 +50,7 @@
         {{ range .Site.Menus.main }}
             {{ if .HasChildren }}
                 <div class="relative group">
-                    <a href="#" class="leading-loose px-3 py-1 group-hover:bg-gray-200 block border mb-2 flex justify-between items-center no-underline {{ if $currentPage.HasMenuCurrent "main" . }}bg-gray-200{{ end }}">
+                    <a href="{{ .URL }}" class="leading-loose px-3 py-1 group-hover:bg-gray-200 block border mb-2 flex justify-between items-center no-underline {{ if $currentPage.HasMenuCurrent "main" . }}bg-gray-200{{ end }}">
                         {{ .Name }} <i class="fas fa-chevron-down ml-2 text-gray-600 text-base"></i>
                     </a>
                     <div class="hidden group-hover:block mb-2 -mt-2">
