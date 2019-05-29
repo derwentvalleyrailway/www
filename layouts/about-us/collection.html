@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main>
+    <section class="container p-8 mx-auto">
+        {{ .Content }}
+
+        {{ $headless := .Site.GetPage "/about-us/collection/locomotives" }}
+        {{ $reusablePages := $headless.Resources.Match "*" }}
+        {{ range $reusablePages }}
+            <h3>{{ .Title }}</h3>
+            {{ .Content }}
+        {{ end }}
+    </section>
+</main>
+{{ end }}
