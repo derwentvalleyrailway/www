@@ -1,5 +1,4 @@
 +++
-layout = "collection"
 title = "Our Collection"
 [menu.main]
 parent = "About Us"
