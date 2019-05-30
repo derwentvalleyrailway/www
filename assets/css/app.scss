@@ -195,6 +195,12 @@ $burger-height: 1.2rem;
     }
 }
 
+table {
+    td {
+        @apply border border-gray-600 px-3 py-2;
+    }
+}
+
 @responsive {
     .text-shadow {
         text-shadow: 0 2px 4px rgba(0,0,0,0.10);
