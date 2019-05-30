@@ -14,13 +14,10 @@ title = "Carriages"
 key = "carriages"
 image = "/v1559216741/www/image009_uu4hzz.jpg"
 
-# [[groups]]
-# title = "Carriages"
-# key = "carriages"
-
-# [[groups]]
-# title = "Wagons"
-# key = "wagons"
+[[groups]]
+title = "Wagons"
+key = "wagons"
+image = "/v1559219390/www/image031_qs6anx.jpg"
 
 # [[groups]]
 # title = "Infrastructure Vehicles"
