@@ -9,7 +9,7 @@
     <section class="container p-8 pt-0 mx-auto">
         <div class="max-w-2xl">
             {{ range .Resources.ByType "page" }}
-                <div class="border mb-4">
+                <div class="border bg-gray-100 mb-4">
                     <div class="flex justify-between items-center px-4 py-3 expand cursor-pointer group" onclick="expand(this)">
                         <div class="font-bold">
                             {{ .Title }}
