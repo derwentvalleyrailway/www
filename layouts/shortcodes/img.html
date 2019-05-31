@@ -1,0 +1,14 @@
+<!--
+    Options:
+    src=""
+    caption=""
+-->
+
+<figure class="mb-4 bg-gray-100">
+    <img src="{{ .Site.Params.cloudinaryBase }}/c_fit,w_800{{ .Get "src" }}" {{ with .Get "caption" }}alt="{{ . }}"{{ end }} loading="lazy" class="w-auto max-w-full mx-auto">
+    {{ with .Get "caption" }}
+        <figcaption class="p-2 bg-gray-200 text-center text-sm text-gray-700">
+            {{ . }}
+        </figcaption>
+    {{ end }}
+</figure>
