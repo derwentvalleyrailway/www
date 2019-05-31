@@ -1,0 +1,50 @@
+{{ define "main" }}
+<main>
+    <section class="container p-8 mx-auto">
+        <div class="max-w-2xl">
+            <a class="no-underline text-gray-600 hover:text-red-900" href="../"><i class="fas fa-chevron-left mr-1"></i> Back</a>
+            {{ .Content }}
+        </div>
+    </section>
+    <section class="container p-8 pt-0 mx-auto">
+        <div class="max-w-2xl">
+            {{ range .Resources.ByType "page" }}
+                <div class="border bg-gray-300 mb-4">
+                    <div class="flex justify-between items-center px-4 py-3 expand cursor-pointer group" onclick="expand(this)">
+                        <div class="font-bold">
+                            {{ .Title }}
+                        </div>
+                        <div class="text-lg text-gray-600 group-hover:text-gray-900">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="collapse">
+                        <div class="px-4 pb-4">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}
+
+{{ define "head" }}
+<script>
+    function expand(element) {
+        let collapse = element.parentElement.querySelector('.collapse');
+        let icon = element.querySelector('.fas');
+
+        if(collapse.classList.contains('active')) {
+            collapse.classList.remove('active');
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        } else {
+            collapse.classList.add('active');
+            icon.classList.add('fa-minus');
+            icon.classList.remove('fa-plus');
+        }
+    }
+</script>
+{{ end }}

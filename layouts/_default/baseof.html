@@ -60,6 +60,8 @@
 
 		<script src="//app.giveforms.com/install-popup-button.js" type="text/javascript" onload="checkDonate()" defer></script>
 
+		{{ block "js" . }}{{ end }}
+
 		{{/* Google Analytics */}}
 		{{ if eq (getenv "HUGO_ENV") "production" }}
 			<script>

@@ -183,6 +183,24 @@ $burger-height: 1.2rem;
     }
 }
 
+.collapse {
+    display: block;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+    
+    &.active {
+        max-height: 99rem;
+        transition: max-height .5s ease-in-out;
+    }
+}
+
+table {
+    td {
+        @apply border border-gray-600 px-3 py-2;
+    }
+}
+
 @responsive {
     .text-shadow {
         text-shadow: 0 2px 4px rgba(0,0,0,0.10);
