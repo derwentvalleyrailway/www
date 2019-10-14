@@ -9,6 +9,7 @@ description = "The Derwent Valley Railway was established in 1990 to preserve th
 googleMapsApiKey = "AIzaSyD3mCeMb6721fhqX3A-HyEZ4vtBXiPRmBE"
 image = "/v1558609700/www/who_mzceyi.jpg"
 instagramApiKey = "2873942248.1677ed0.34b640814ca6404b9767a2e96d2cd1df"
+googleAnalytics = "UA-72185346-1"
 
 [[menu.footer]]
 identifier = "github"
