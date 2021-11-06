@@ -30,6 +30,8 @@ The Derwent Valley Railway Preservation Society Inc. is governed by the Board of
 
 Our financial statements are audited annually and available for download below.
 
-- [2020](/downloads/dvr-audited-statement-2020.pdf)
-- [2019](/downloads/dvr-audited-statement-2019.pdf)
-- [2018](/downloads/dvr-audited-statement-2018.pdf)
+- [2020 Audited Financial Statement](/downloads/dvr-audited-statement-2020.pdf)
+- [2019 Audited Financial Statement](/downloads/dvr-audited-statement-2019.pdf)
+- [2018 Audited Financial Statement](/downloads/dvr-audited-statement-2018.pdf)
+
+## Officers
