@@ -18,5 +18,3 @@ The Derwent Valley railway line, from New Norfolk to Mt Field National Park, lin
 # Volunteering
 The Derwent Valley Railway is operated solely by volunteers from a diverse range of backgrounds, professions and age groups. If you would be interested in becoming involved, consider becoming a member online today.
 {{% /image-card %}}
-
-{{< instagram-feed >}}
